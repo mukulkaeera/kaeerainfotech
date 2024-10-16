@@ -1,0 +1,207 @@
+$primary-color: #3498db; /* Blue */
+$secondary-color: #f1c40f; /* Yellow */
+$hover-color: darken($primary-color, 10%);
+$navbar-bg: transparent; /* Fully transparent background */
+$scrolled-bg: #fff; /* White background for navbar when scrolled */
+$dropdown-bg: rgba(255, 255, 255, 0.95); /* Slightly transparent dropdown */
+$active-line-color: $secondary-color; /* Color for active link underline */
+$hr-color: rgba(52, 152, 219, 0.4); /* Subtle hr color */
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: $navbar-bg;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &.scrolled {
+    position: fixed;
+    top: 0;
+    background-color: $scrolled-bg; /* White background when scrolled */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+
+  /* Partition line (hr) between navbar and banner */
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $hr-color;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  width: 150px;
+  z-index: 9;
+  a {
+    display: block;
+  }
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 2rem;
+  z-index: 9;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 98px;
+    left: 0;
+    right: 0;
+    background: $navbar-bg;
+    display: none;
+
+    &.open {
+      display: flex;
+    }
+  }
+}
+
+.navItem {
+  margin: 0 1.5rem;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: 600;
+    padding: 10px 20px; /* Add padding for spacing */
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+    /* Active link style */
+    &.active {
+      color: $secondary-color;
+      background-color: lighten($primary-color, 40%);
+      
+      /* Underline for active links */
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $active-line-color;
+      }
+    }
+
+    &:hover {
+      color: $secondary-color;
+      background-color: lighten($primary-color, 30%);
+
+      /* Add underline for hover state */
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: $active-line-color;
+      }
+    }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: $dropdown-bg;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  .dropdownItem {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($primary-color, 40%);
+    }
+
+    a {
+      margin-left: 0.5rem;
+      color: $primary-color;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      color: $primary-color;
+    }
+
+    .dropdownImage {
+      margin-left: 1rem;
+      border-radius: 50%;
+    }
+  }
+
+  .navItem:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Hamburger menu styles
+.hamburger {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  flex-direction: column;
+  cursor: pointer;
+
+  .line {
+    height: 3px;
+    width: 25px;
+    background-color: $primary-color;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+
+    &.active {
+      background-color: $secondary-color;
+    }
+  }
+}

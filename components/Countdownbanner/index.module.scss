@@ -1,0 +1,125 @@
+// components/index.module.scss
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    // border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    height: 400px; // Increased height
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        // transform: scale(1.03); // Slightly scale up on hover
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column; // Stack on smaller screens
+        text-align: center;
+        height: auto; // Allow height to be dynamic
+    }
+}
+
+.iconBox, .rightIconContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; // Stack icons vertically
+}
+
+.icon { 
+    color: #6a82fb; // Attractive color
+    font-size: 60px; // Increased size
+    transition: color 0.3s ease, transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+    width: 200px;
+    @media screen and (max-width:768px) {
+        height: 10vh    ;
+        width: 80px;
+    }
+    &:hover {
+        color: #ffcc00; // Change color on hover
+        transform: scale(1.2) rotate(360deg); // Rotate 360 degrees on hover
+        filter: drop-shadow(0 0 15px rgba(255, 204, 0, 0.8)); // Glow effect
+        opacity: 1; // Full opacity on hover
+    }
+
+}
+
+
+.counterContainer {
+    flex: 1;
+    text-align: center;
+}
+
+.counterBox {
+    margin: 1rem 0;
+}
+
+.counter {
+    font-size: 6rem; // Larger font size for visibility
+    color: #333;
+    margin: 0;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #ffcc00; // Change color on hover
+        transform: scale(1.1); // Scale up on hover
+    }
+}
+
+.description {
+    font-size: 1.6rem; // Increased font size
+    color: #666;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px); // Lift effect on hover
+    }
+}
+
+.randomText {
+    font-size: 1.3rem;
+    color: #888; // Lighter text
+    margin-top: 0.5rem;
+    animation: fadeIn 1s ease;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+@keyframes scaleRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.rightIcon {
+    height: 30vh;
+    width: 80%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    @media (max-width: 768px) {
+        animation: scaleRotate 2s infinite; // Loop the animation
+    }
+}
+

@@ -1,0 +1,59 @@
+// index.module.scss
+$navbar-bg: rgb(242, 242, 242);
+$navbar-hover: #ddd;
+$icon-size: 20px;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: $navbar-bg;
+    padding: 10px;
+    height: 3vh;
+    justify-content: space-between;
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+
+        .icon {
+            color: rgb(120, 120, 120);
+            text-decoration: none;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: black;
+            }
+        }
+    }
+
+    .iconImg {
+        width: $icon-size;
+        height: $icon-size;
+        margin-right: 5px;
+    }
+}
+
+// Responsive Styles
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        // align-items: flex-start;
+
+        .contact {
+            flex-direction: column;
+
+            .icon {
+                padding: 5px 0;
+            }
+        }
+    }
+}

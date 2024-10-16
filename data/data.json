@@ -1,0 +1,33 @@
+{
+    "company": "Kaeera Information Technology",
+    "tagline": "Innovating the Future of Technology",
+    "careers": [
+        {
+            "title": "Software Engineer",
+            "description": "Join our dynamic team to develop cutting-edge software solutions.",
+            "requirements": [
+                "Bachelor's degree in Computer Science or related field",
+                "Proficiency in Java, Python, or C++",
+                "Strong problem-solving skills"
+            ]
+        },
+        {
+            "title": "Data Scientist",
+            "description": "Analyze complex data to drive strategic business decisions.",
+            "requirements": [
+                "Experience with machine learning algorithms",
+                "Proficient in Python and SQL",
+                "Excellent analytical skills"
+            ]
+        },
+        {
+            "title": "UI/UX Designer",
+            "description": "Create user-centered designs that enhance user experiences.",
+            "requirements": [
+                "Portfolio showcasing design work",
+                "Proficient in design tools like Figma or Adobe XD",
+                "Strong understanding of user experience principles"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,106 @@
+// components/index.module.scss
+
+$primary-color: #3498db;
+$hover-color: #2980b9;
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; // Align text to the left
+  align-items: center;
+  padding: 3rem; // Added padding for a spacious layout
+  height: 65vh; // Set height as necessary
+  overflow: hidden;
+  color: white; // Ensure text is visible against the video
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto; // Allow height to adjust on mobile
+  }
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // Cover the entire banner
+  filter: blur(1px); // Blur the video
+  z-index: 0; // Send video behind text
+}
+
+.textContainer {
+  flex: 0 0 50%; // Set text container to 50% width
+  padding: 2rem;
+  z-index: 1; // Space from the right
+  font-family: sans-serif; 
+
+  @media (max-width: 768px) {
+    flex: 1; // Take full width on mobile
+    padding-right: 0;
+    padding-left: 0; // Remove padding on mobile
+  }
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block; /* Make the title inline-block for line alignment */
+  position: relative; 
+  
+  // animation: fadeIn 0.5s ease;
+
+  @media screen and (max-width :768px) {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+.title::after {
+  content: ''; /* Required for pseudo-elements */
+  display: block; /* Make it a block element */
+  height: 4px; /* Line height */
+  background-color: orange; /* Line color */
+  width: 80%; /* Same width as the text */
+  position: absolute; /* Position it relative to the title */
+  bottom: -6px; /* Adjust position below the text */
+  left: 0; /* Align to the left */
+}
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  @media screen and (max-width:768px) {
+    text-align: justify;
+  }
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: $primary-color;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: $hover-color;
+    transform: scale(1.05);
+  }
+}

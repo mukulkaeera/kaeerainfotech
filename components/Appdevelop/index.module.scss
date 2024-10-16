@@ -1,0 +1,130 @@
+$primary-color: rgb(71, 162, 222); // Coral
+$secondary-color: rgb(71, 162, 222); // Lavender
+$heading-color: #007bff; // Blue
+$text-color: #444;
+$background-color: #f0f4f8; // Light Gray
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+  background-color: $background-color;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media screen and (max-width:768px) {
+    padding: 0;
+  }
+
+  .hero {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      font-size: 3rem;
+      color: $heading-color;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $text-color;
+    }
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+
+    .serviceSection {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .icon {
+        height: 100px; // Adjusted for consistency
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        color: $primary-color;
+        margin: 15px 0;
+      }
+
+      p {
+        color: $text-color;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 50px;
+
+    p {
+      font-size: 1.2rem;
+      color: $text-color;
+      margin-bottom: 20px;
+    }
+
+    .contactButton {
+      background-color: $secondary-color;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Responsive design adjustments
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .services {
+    gap: 20px;
+  }
+
+  .serviceSection {
+    padding: 15px;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

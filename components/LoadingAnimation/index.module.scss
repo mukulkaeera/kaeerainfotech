@@ -1,0 +1,44 @@
+// src/components/index.module.scss
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000; // Black background
+
+    .dot {
+        width: 10px; // Initial size of the dot
+        height: 10px; // Initial size of the dot
+        background-color: #fff; // Dot color
+        border-radius: 50%; // Make it a circle
+        transition: height 1s ease, width 0.5s ease; // Smooth transition
+
+        &.expanding {
+            height: 300px; // Expand to vertical line
+            width: 5px; // Set final width for the line
+        }
+    }
+
+    .textContainer {
+        opacity: 1; // Start visible
+        transform: translateY(20px); // Initial position for the text
+        transition: opacity 0.5s ease 0.5s, transform 0.5s ease 0.5s; // Fade and slide effect
+        display: flex;
+        align-items: center;
+
+        .icon {
+            font-size: 2rem; // Adjust size of the icon
+            color: #fff; // Icon color
+            margin-right: 10px; // Space between icon and text
+        }
+    }
+
+    .welcomeText {
+        color: #fff; // Text color
+        font-size: 2rem; // Adjust font size
+        margin-left: 10px; // Space between icon and text
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); // Text shadow for depth
+    }
+}

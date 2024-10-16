@@ -1,0 +1,18 @@
+{
+    "sourceFile": "pages/_app.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1727314469590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1727314469590,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport App from 'next/app';\r\nimport Navbar from '../components/Navbar';\r\nimport Footer from '../components/Footer';\r\nimport dotenv from 'dotenv';\r\nimport Head from 'next/head';\r\nimport KL from '../images/KL logo - Copy.png'; // Make sure the path is correct\r\nimport './globals.css'\r\ndotenv.config();\r\n\r\nclass MyApp extends App {\r\n  static async getInitialProps({ Component, ctx }: any) {\r\n    let pageProps = {};\r\n    if (Component.getInitialProps) {\r\n      pageProps = await Component.getInitialProps(ctx);\r\n    }\r\n    return { pageProps };\r\n  }\r\n\r\n  render() {\r\n    const { Component, pageProps } = this.props;\r\n\r\n    return (\r\n      <div>\r\n        <Head>\r\n          <link rel=\"icon\" href={KL.src} />\r\n          <link rel=\"apple-touch-icon\" href={KL.src} />\r\n          <meta name=\"description\" content=\"Kaeera ventures your all IT requirements will be fullfilled.\" />\r\n          {/* Add any other head elements you want */}\r\n        </Head>\r\n        <Navbar />\r\n        <Component {...pageProps} />\r\n        <Footer />\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nexport default MyApp;\r\n"
+        }
+    ]
+}

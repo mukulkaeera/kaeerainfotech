@@ -1,0 +1,30 @@
+{
+    "sourceFile": "components/Banner/index.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1727316443070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1727316499877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const Banner = () => {\r\n   return (\r\n     <div className={styles.banner}>\r\n       <video className={styles.video} autoPlay loop muted preload=\"auto\">\r\n-        <source src=\"https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4\" type=\"video/mp4\" />\r\n+        <source src=\"https://videos.pexels.com/video-files/2759477/2759477-uhd_2560_1440_30fps.mp4\" type=\"video/mp4\" />\r\n         Your browser does not support the video tag.\r\n       </video>\r\n       <div className={styles.textContainer}>\r\n         <h1 className={styles.title}>\r\n"
+                },
+                {
+                    "date": 1727316531961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const Banner = () => {\r\n   return (\r\n     <div className={styles.banner}>\r\n       <video className={styles.video} autoPlay loop muted preload=\"auto\">\r\n-        <source src=\"https://videos.pexels.com/video-files/2759477/2759477-uhd_2560_1440_30fps.mp4\" type=\"video/mp4\" />\r\n+        <source src=\"https://videos.pexels.com/video-files/7670836/7670836-uhd_2560_1440_30fps.mp4\" type=\"video/mp4\" />\r\n         Your browser does not support the video tag.\r\n       </video>\r\n       <div className={styles.textContainer}>\r\n         <h1 className={styles.title}>\r\n"
+                },
+                {
+                    "date": 1727316652326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n const Banner = () => {\r\n   return (\r\n     <div className={styles.banner}>\r\n       <video className={styles.video} autoPlay loop muted preload=\"auto\">\r\n-        <source src=\"https://videos.pexels.com/video-files/7670836/7670836-uhd_2560_1440_30fps.mp4\" type=\"video/mp4\" />\r\n+        <source src=\"https://videos.pexels.com/video-files/3129902/3129902-uhd_2560_1440_25fps.mp4\" type=\"video/mp4\" />\r\n         Your browser does not support the video tag.\r\n       </video>\r\n       <div className={styles.textContainer}>\r\n         <h1 className={styles.title}>\r\n"
+                }
+            ],
+            "date": 1727316443070,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport styles from './index.module.scss';\r\nimport Link from 'next/link';\r\n\r\nconst Banner = () => {\r\n  return (\r\n    <div className={styles.banner}>\r\n      <video className={styles.video} autoPlay loop muted preload=\"auto\">\r\n        <source src=\"https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_30fps.mp4\" type=\"video/mp4\" />\r\n        Your browser does not support the video tag.\r\n      </video>\r\n      <div className={styles.textContainer}>\r\n        <h1 className={styles.title}>\r\n          Kaeera InfoTechnology - Complate Digital Marketing and consultation Agency.\r\n        </h1>\r\n        <p className={styles.description}>\r\n          Kaeera Infotechnology is your one-stop company for all your needs. Whether you need digital marketing or consultation services information technology. We realise that in the current world with technology being the core then a strong online platform is key to business success.\r\n          {/* Explore an exciting range of services that enhance user experience and engage your audience like never before. From subtle transitions to bold effects, discover how web & app applications can transform your web presence. */}\r\n        </p>\r\n        <button className={styles.button}>\r\n          <Link href=\"/services\" style={{ textDecoration: \"none\", color: \"white\" }}>\r\n            Get Started\r\n          </Link>\r\n        </button>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Banner;\r\n"
+        }
+    ]
+}

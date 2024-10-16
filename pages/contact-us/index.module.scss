@@ -1,0 +1,146 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 50px;
+    background: linear-gradient(to right, #6a82fb, #fc5c7d);
+    color: white;
+
+    @media (max-width: 768px) {
+        padding: 40px;
+    }
+}
+
+.mapSection {
+    display: flex;
+    gap: 40px;
+
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+    }
+}
+
+.map {
+    width: 800px;
+
+    @media screen and (max-width:768px) {
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: 4rem; // Increased title size
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.infoSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; // Allow cards to wrap
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contactCard {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+    width: 240px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.icon {
+    font-size: 2.5rem;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+    color: #ffcc00; // Icon color
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+
+    input,
+    textarea {
+        width: 100%;
+        margin: 10px 0;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        background: rgba(255, 255, 255, 0.5);
+        color: #333;
+
+        &:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        color: white;
+        background: #ffcc00;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+            background: white;
+            font-weight: bolder;
+            color: #ffcc00;
+        }
+    }
+}
+
+.socialMedia {
+    margin-top: 40px;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .socialIcon {
+        font-size: 2rem;
+        color: white; // Ensure this color is visible against the background
+        transition: color 0.3s;
+        width: 50px;
+
+        &:hover {
+            color: #ffcc00; // Change on hover
+        }
+    }
+}

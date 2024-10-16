@@ -1,0 +1,18 @@
+{
+    "sourceFile": "components/Banner/index.module.scss",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1727315872671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1727315872670,
+            "name": "Commit-0",
+            "content": "// components/index.module.scss\r\n\r\n$primary-color: #3498db;\r\n$hover-color: #2980b9;\r\n\r\n.banner {\r\n  position: relative;\r\n  display: flex;\r\n  justify-content: flex-start; // Align text to the left\r\n  align-items: center;\r\n  padding: 3rem; // Added padding for a spacious layout\r\n  height: 65vh; // Set height as necessary\r\n  overflow: hidden;\r\n  color: white; // Ensure text is visible against the video\r\n\r\n  @media (max-width: 768px) {\r\n    flex-direction: column;\r\n    align-items: center;\r\n    text-align: center;\r\n    height: auto; // Allow height to adjust on mobile\r\n  }\r\n}\r\n\r\n.video {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  width: 100%;\r\n  height: 100%;\r\n  object-fit: cover; // Cover the entire banner\r\n  filter: blur(1px); // Blur the video\r\n  z-index: 0; // Send video behind text\r\n}\r\n\r\n.textContainer {\r\n  flex: 0 0 50%; // Set text container to 50% width\r\n  padding: 2rem;\r\n  z-index: 1; // Space from the right\r\n\r\n  @media (max-width: 768px) {\r\n    flex: 1; // Take full width on mobile\r\n    padding-right: 0;\r\n    padding-left: 0; // Remove padding on mobile\r\n  }\r\n}\r\n\r\n.title {\r\n  font-size: 2rem;\r\n  margin-bottom: 1rem;\r\n  // animation: fadeIn 0.5s ease;\r\n\r\n  @media screen and (max-width :768px) {\r\n    font-size: 1.5rem;\r\n  }\r\n\r\n  @keyframes fadeIn {\r\n    from {\r\n      opacity: 0;\r\n      transform: translateY(20px);\r\n    }\r\n\r\n    to {\r\n      opacity: 1;\r\n      transform: translateY(0);\r\n    }\r\n  }\r\n}\r\n\r\n.description {\r\n  font-size: 1.2rem;\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.button {\r\n  padding: 0.5rem 1.5rem;\r\n  border: none;\r\n  border-radius: 5px;\r\n  background-color: $primary-color;\r\n  color: white;\r\n  font-size: 1rem;\r\n  cursor: pointer;\r\n  transition: background-color 0.3s ease, transform 0.3s ease;\r\n\r\n  &:hover {\r\n    background-color: $hover-color;\r\n    transform: scale(1.05);\r\n  }\r\n}"
+        }
+    ]
+}

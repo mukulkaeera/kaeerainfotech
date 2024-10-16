@@ -1,0 +1,119 @@
+$primary-color: #007bff; // Blue
+$secondary-color: #007bff; // Lavender
+$text-color: #444;
+$background-color: #f0f4f8; // Light Gray
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+  background-color: $background-color;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+@media screen and (max-width:768px) {
+  padding: 0px;
+}
+  .header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 15px;
+      @media screen and (max-width:768px) {
+        font-size: 2rem;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      @media screen and (max-width:768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: $text-color;
+      @media screen and (max-width:768px) {
+        font-size: 1rem;
+      }
+    }
+
+    .estimateButton {
+      background-color: $secondary-color;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+
+    .featureCard {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .icon {
+        font-size: 1rem;
+        width: 50px;
+        color: $primary-color;
+        margin-bottom: 15px;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: $primary-color;
+        margin: 10px 0;
+      }
+
+      p {
+        color: $text-color;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// Responsive design adjustments
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header h2 {
+    font-size: 1.5rem;
+  }
+
+  .features {
+    gap: 20px;
+  }
+}

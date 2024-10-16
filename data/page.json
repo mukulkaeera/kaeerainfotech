@@ -1,0 +1,56 @@
+[
+    {
+        "title": "We have perfect Web Developers ",
+        "video": "https://videos.pexels.com/video-files/7272375/7272375-hd_1920_1080_25fps.mp4",
+        "description": "At Kaeera Infotechnology, we provide exceptional web development services tailored to meet your business needs. Our team is dedicated to delivering high-quality websites that not only look great but also function seamlessly. We focus on creating user-friendly designs that enhance the overall user experience.",
+        "permalink": "web-development",
+        "secondbannerhead": "Why Choose Us",
+        "seconfbannerimageurl": "https://images.pexels.com/photos/5685840/pexels-photo-5685840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "secondbannercontent": "Kaeera Infotechnology specializes in web development , app development & others providing user-friendly and responsive websites. We focus on detail to optimize performance and SEO, ensuring your online presence enhances user engagement.",
+        "thirdhead":"Website Development Company in Noida",
+        "thirdcontent":"Our expert designers have the dedication to excel at their work and experience with global brands and earned positive feedback from them. Our best design & developers team will provide you with a unique experience in website design. SLN Softwares assure a multi-channel web presence for your business that will enable valuable customers to experience the product in real-time and communicate with the facility of increasing your commercial potential.",
+        "fourthhead":"Website Designing Services",
+       "fourthcontent": "Kaeera Infotechnology is known for its excellent work. Our team of expert website designers in Delhi will provide you with a remarkable experience. We provide you with a variety of website designing services at an affordable price"
+    },
+    {
+        "title": "We have perfect App Developers",
+        "video": "https://videos.pexels.com/video-files/4565731/4565731-uhd_2560_1440_25fps.mp4",  
+        "description": "At Kaeera Infotechnology, we specialize in providing top-notch app development services designed to elevate your business. Our dedicated team is committed to creating intuitive and high-performance applications that cater to your specific requirements.",
+        "permalink": "app-development",
+        "secondbannerhead": "Why Choose Us",
+        "seconfbannerimageurl": "https://images.pexels.com/photos/5685840/pexels-photo-5685840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "secondbannercontent": "Kaeera Infotechnology specializes in web development, app development, and more, providing user-friendly and responsive applications. We focus on detail to optimize performance and SEO, ensuring your online presence enhances user engagement.",
+        "thirdhead": "App Development Company in Noida",
+        "thirdcontent": "Our expert app developers are committed to excellence and have experience working with global brands, receiving positive feedback for their work. Our dedicated team will provide you with a unique experience in app development, ensuring a robust and scalable solution that meets your business needs.",
+        "fourthhead": "App Development Services",
+        "fourthcontent": "Kaeera Infotechnology is renowned for its exceptional work in app development. Our team of expert app developers in Delhi will provide you with a remarkable experience, delivering a variety of app development services at an affordable price."
+    },    
+    {
+        "title": "Introduction to Digital Marketing",
+        "video": "https://videos.pexels.com/video-files/9224620/9224620-uhd_2560_1440_24fps.mp4",  
+        "description": "Discover the fundamentals of digital marketing and its importance in today's business landscape. Learn about various strategies that can help enhance your brand's online presence.",
+        "permalink": "digital-marketing",
+        "secondbannerhead": "Why Digital Marketing Matters",
+        "seconfbannerimageurl": "https://t4.ftcdn.net/jpg/01/18/44/93/360_F_118449320_KVFNE3cnTIPfKvX1XKVBdJCqTxJ14taF.jpg",
+        "secondbannercontent": "In a world where online presence is crucial, digital marketing offers tools and strategies to connect with your audience effectively. From social media to SEO, mastering these techniques can significantly impact your business growth.",
+        "thirdhead": "Digital Marketing Strategies",
+        "thirdcontent": "Our team of digital marketing experts will guide you through the essential strategies needed to succeed. From content marketing to pay-per-click advertising, we provide tailored solutions that align with your business goals.",
+        "fourthhead": "Join Us Today",
+        "fourthcontent": "Enroll in our digital marketing courses and take the first step towards mastering the art of online marketing. Gain the skills you need to thrive in the digital age."
+    },
+    {
+        "title": "Staffing Services",
+        "video": "https://videos.pexels.com/video-files/6804117/6804117-uhd_2732_1440_25fps.mp4", 
+        "description": "Our staffing services provide businesses with the talent they need to thrive. We specialize in connecting organizations with skilled professionals tailored to meet their unique requirements.",
+        "permalink": "us-staffing",
+        "secondbannerhead": "Why Choose Our Staffing Solutions",
+        "seconfbannerimageurl": "https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "secondbannercontent": "In today's competitive market, having the right team is crucial. Our staffing solutions ensure you have access to top talent without the hassle of lengthy recruitment processes.",
+        "thirdhead": "Tailored Recruitment Processes",
+        "thirdcontent": "We understand that every organization is different. Our tailored recruitment strategies are designed to find the right candidates for your specific needs, ensuring a perfect fit for your company culture.",
+        "fourthhead": "Join Our Network",
+        "fourthcontent": "Whether you are a job seeker looking for new opportunities or a business in need of skilled professionals, join our network today to connect with the best in the industry."
+    }
+    
+    
+]

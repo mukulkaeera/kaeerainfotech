@@ -1,0 +1,149 @@
+$primary-color: #8e44ad; // Purple
+$secondary-color: #f39c12; // Orange
+$text-color: #34495e; // Dark gray
+$background-color: #ecf0f1; // Light background
+$box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: $background-color;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: $box-shadow;
+
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+
+    h1 {
+      font-size: 2.5rem;
+      color: $primary-color;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: $text-color;
+      margin-bottom: 20px;
+    }
+  }
+
+  .services {
+    width: 100%;
+
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: $primary-color;
+    }
+
+    .serviceList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .serviceItem {
+        position: relative;
+        background-color: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px;
+        width: 300px;
+        box-shadow: $box-shadow;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        .serviceImage {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 15px 15px 0 0;
+          transition: transform 0.3s;
+        }
+
+        .iconContainer {
+          position: absolute;
+          top: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: $primary-color;
+          border-radius: 50%;
+          padding: 15px;
+          box-shadow: $box-shadow;
+        }
+
+        .icon {
+          font-size: 2rem;
+          color: white;
+        }
+
+        h3 {
+          color: $primary-color;
+          font-size: 1.5rem;
+          margin: 10px 0;
+        }
+
+        p {
+          color: $text-color;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+
+          .serviceImage {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 30px;
+
+    p {
+      font-size: 1.1rem;
+      color: $text-color;
+      margin-bottom: 15px;
+    }
+
+    .contactButton {
+      background-color: $secondary-color;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .services {
+    .serviceItem {
+      width: 90%;
+      margin: 10px 0;
+    }
+  }
+}
+    

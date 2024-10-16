@@ -1,0 +1,98 @@
+// components/index.module.scss
+.intro {
+    position: relative;
+    text-align: left; // Align text to the left
+    padding: 2rem;
+    background-image: url('https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    height: 400px; // Adjust height as needed
+    display: flex; // Use flexbox for layout
+    justify-content: space-between; // Space between text and image
+    align-items: center; // Center vertically
+
+    &.animated {
+        opacity: 1; // Ensure it's fully visible
+        transition: opacity 0.5s ease;
+    }
+    @media screen and (max-width:768px) {
+        padding-left: 1rem;
+    }
+
+    .backgroundOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); // Dark overlay for better text readability
+        backdrop-filter: blur(2px); // Blur effect
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; // Align items to the left
+        padding-left: 2rem; // Add some padding on the left
+        @media screen and (max-width:768px) {
+            // font-size: 1.5rem;
+            padding-left: 0.5rem;
+        }
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white; // Text color
+            opacity: 0; // Start invisible
+            transform: translateY(-20px); // Start slightly above
+            animation: fadeInUp 0.5s forwards; // Add animation
+          
+            @media screen and (max-width: 768px) {
+              font-size: 1.6rem;
+              // padding-left: 0.5rem;
+            }
+          }
+          
+          @keyframes fadeInUp {
+            to {
+              opacity: 1; // Fade in to visible
+              transform: translateY(0); // Move to original position
+            }
+          }
+          
+          .description {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: white; // Text color
+            opacity: 0; // Start invisible
+            transform: translateY(20px); // Start slightly below
+            animation: fadeInUp 0.5s forwards; // Add animation
+          
+            // Optionally, you can add a delay to the description to make it appear after the title
+            animation-delay: 0.2s; // Delay before the animation starts
+          
+            @media screen and (max-width: 768px) {
+              font-size: 1rem; // Adjust font size for smaller screens
+            }
+          }
+          
+          // Keyframes for the animation (same as before)
+          @keyframes fadeInUp {
+            to {
+              opacity: 1; // Fade in to visible
+              transform: translateY(0); // Move to original position
+            }
+          }
+          
+    }
+
+    .rightImage {
+        width: 50%; // Adjust the width as needed
+        height: auto; // Maintain aspect ratio
+        background-image: url('https://user-images.githubusercontent.com/53836911/97809147-3f229a00-1c91-11eb-8fb8-730e772e3151.gif');
+        background-size: cover;
+        background-position: center;
+    }
+}
+.icon{
+    height: 40px;
+    width: 50px;
+}

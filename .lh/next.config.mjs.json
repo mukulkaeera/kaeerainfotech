@@ -1,0 +1,30 @@
+{
+    "sourceFile": "next.config.mjs",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1727316061629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1727316147828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n   images: {\r\n     domains: [\r\n       'user-images.githubusercontent.com',\r\n       'images.pexels.com',\r\n-      'www.simplilearn.com'\r\n+      'www.simplilearn.com',\r\n+      'images.spiceworks.com'\r\n     ],\r\n   },\r\n   \r\n };\r\n"
+                },
+                {
+                    "date": 1727316187937,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,10 @@\n     domains: [\r\n       'user-images.githubusercontent.com',\r\n       'images.pexels.com',\r\n       'www.simplilearn.com',\r\n-      'images.spiceworks.com'\r\n+      'images.spiceworks.com',\r\n+      'media.licdn.com'\r\n     ],\r\n   },\r\n   \r\n };\r\n"
+                },
+                {
+                    "date": 1727316235017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n       'user-images.githubusercontent.com',\r\n       'images.pexels.com',\r\n       'www.simplilearn.com',\r\n       'images.spiceworks.com',\r\n-      'media.licdn.com'\r\n+      'media.licdn.com',\r\n+      'encrypted-tbn0.gstatic.com'\r\n     ],\r\n   },\r\n   \r\n };\r\n"
+                }
+            ],
+            "date": 1727316061629,
+            "name": "Commit-0",
+            "content": "// next.config.mjs\r\nimport dotenv from 'dotenv';\r\n\r\n// Configure dotenv\r\ndotenv.config();\r\n\r\n/** @type {import('next').NextConfig} */\r\nconst nextConfig = {\r\n  images: {\r\n    domains: [\r\n      'user-images.githubusercontent.com',\r\n      'images.pexels.com',\r\n      'www.simplilearn.com'\r\n    ],\r\n  },\r\n  \r\n};\r\n\r\nexport default nextConfig;\r\n"
+        }
+    ]
+}

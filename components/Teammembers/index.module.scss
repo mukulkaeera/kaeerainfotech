@@ -1,0 +1,111 @@
+/* components/TeamMembers.module.scss */
+.team {
+  text-align: center;
+}
+
+.heading {
+  font-size: 40px;
+}
+
+.team h2 {
+  margin-bottom: 1.5rem;
+  color: #333; /* Dark text */
+}
+
+.teamList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center the list */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.teamMember {
+  margin: 1rem;
+  text-align: center; /* Center text for better readability on mobile */
+  width: 250px; /* Full width for mobile */
+  height: 300px; /* Increased height */
+  background: #ffffff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.3s; /* Smooth scaling effect on hover */
+
+  &:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+    // flex: 0 1 calc(50% - 2rem); /* Two cards per row on mobile */
+  }
+}
+
+.memberImage {
+  width: 120px; /* Set fixed width for images */
+  height: 120px; /* Set fixed height for images */
+  border-radius: 50%; /* Circular images */
+  margin: 0 auto; /* Center the image */
+  margin-bottom: 0.5rem; /* Spacing below image */
+}
+
+.memberInfo {
+  color: #333; /* Dark text for better readability */
+  display: flex; /* Flexbox to center align */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align items */
+}
+
+.memberInfo h3 {
+  margin: 0.5rem 0; /* Spacing for the name */
+  font-size: 1.5rem; /* Increased font size */
+  font-weight: bold; /* Bold weight */
+  font-family: 'Arial', sans-serif; /* Change font family */
+}
+
+.memberInfo p {
+  margin: 0; /* Remove default margin */
+  font-size: 1.2rem; /* Increased font size for roles */
+  font-family: 'Arial', sans-serif; /* Change font family */
+}
+
+.memberDescription {
+  font-size: 0.7rem; /* Smaller font size for description */
+  margin-top: 0.5rem; /* Spacing above description */
+  line-height: 1; /* Better line spacing */
+  font-weight: normal; /* Normal weight */
+}
+
+.socialIcons {
+  margin-top: 1rem; /* Spacing above icons */
+}
+
+.icon {
+  font-size: 1.5rem; /* Icon size */
+  width: 20px;
+  // height: 100px;
+  color: #333; /* Icon color */
+  margin: 0 0.5rem; /* Spacing between icons */
+  transition: transform 0.3s; /* Smooth scaling effect on hover */
+
+  &:hover {
+    transform: scale(1.2); /* Scale up on hover */
+  }
+
+  /* Color changes for each icon on hover */
+  &:nth-child(1):hover {
+    color: #0077b5; /* LinkedIn blue on hover */
+  }
+
+  &:nth-child(2):hover {
+    color: #3b5998; /* Facebook blue on hover */
+  }
+
+  &:nth-child(3):hover {
+    color: #E1306C; /* Instagram pink on hover */
+  }
+
+  &:nth-child(4):hover {
+    color: #1DA1F2; /* Twitter blue on hover */
+  }
+}

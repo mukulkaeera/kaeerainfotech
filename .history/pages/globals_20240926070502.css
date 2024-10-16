@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  /* font-family: var(--font-geist-sans), sans-serif; */
+  /* background-color: #f8f8f8;  */
+  padding: 0;
+}
+
+a {
+  color: inherit; 
+}

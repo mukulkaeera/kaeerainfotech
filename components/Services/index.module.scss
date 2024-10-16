@@ -1,0 +1,166 @@
+.service_card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #6a82fb, #fc5c7d);
+
+  .service_top {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .service {
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: white;
+      padding-bottom: 1px;
+    }
+
+    .under {
+      border: 1px solid white;
+      width: 100px;
+    }
+
+    .checkservice {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .webtech {
+      width: 80%;
+      font-size: 1.2rem;
+      font-family: "Mukta", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      color: white;
+      text-align: justify;
+    }
+  }
+
+  .cardlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    // margin: 50px 0px;
+    padding: 30px;
+    cursor: pointer;
+    background-color: white;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1.5s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 300px;
+    width: 300px;
+
+    .header {
+      color: #4169e1;
+      margin-top: 20px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-family: "Roboto", sans-serif;
+      text-align: center;
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    .content {
+      text-align: justify;
+      color: rgba(48, 34, 34, 0.726);
+      margin-top: 10px;
+      height: 23vh;
+
+      // @media screen and (max-width:1200px) {
+      //   height: auto;
+      // }
+
+      @media screen and (max-width:768px) {
+        height: auto;
+      }
+
+    }
+
+    &:hover {
+      background-color: #4169e1;
+      transform: translateY(-20px);
+      color: white;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+      .title {
+        color: white;
+      }
+
+      .content {
+        color: white;
+      }
+
+      .reachUsButton {
+        background-color: white;
+        color: #4169e1;
+      }
+    }
+
+
+
+    .card_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .image {
+        height: 60px;
+        background-color: white;
+      }
+    }
+
+  }
+
+
+}
+
+.card.animated {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.reachUsButton {
+  // margin-top: 20px;
+  /* Space above the button */
+  padding: 10px 20px;
+  /* Vertical and horizontal padding */
+  font-size: 1.2rem;
+  /* Font size */
+  color: white;
+  /* Text color */
+  background-color: #4169e1;
+  /* Initial background color */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  cursor: pointer;
+  /* Pointer on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Smooth transition for hover effects */
+
+  &:hover {
+    background-color: white;
+    color: #4169e1;
+    /* Darker shade on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge on hover */
+  }
+}

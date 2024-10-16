@@ -1,0 +1,78 @@
+// components/index.module.scss
+.hero {
+  position: relative;
+  height: 12vh; /* Set a fixed height */
+  overflow: hidden; /* Ensure animation stays within bounds */
+
+  .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    // z-index: 1;
+    object-fit: cover; /* Cover the entire section */
+    transform: translate(-50%, -50%); /* Center the video */
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // z-index: 2;
+    background: linear-gradient(to right, #6a82fb, #fc5c7d); /* Gradient background */
+  }
+}
+
+.overlay {
+  position: relative;
+  // z-index: 3; /* Ensure content is above the overlay */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full height of the section */
+
+  .title {
+    font-size: 4rem; /* Large font size */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #ffffff; /* White color for contrast */
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.9); /* Stronger shadow for depth */
+    margin: 0;
+    animation: fadeIn 1s ease forwards, bounce 1s infinite alternate; /* Added bounce animation */
+    opacity: 0; /* Initially hidden */
+    animation-delay: 0.3s; /* Delay for better effect */
+    transition: transform 0.5s; /* Smooth scaling effect on hover */
+
+    &:hover {
+      transform: scale(1.1); /* Scale up effect on hover */
+    }
+  }
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slide up effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for bounce effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Bounce effect */
+  }
+}

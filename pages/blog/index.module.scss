@@ -1,0 +1,122 @@
+.blogPostContainer {
+    width: 100%; // Use percentage for better responsiveness
+    // max-width: 800px; // Maximum width for readability
+    // margin: 2rem auto; // Center the container
+    // padding: 2rem;
+    background: #ffffff; // White background for the main content
+    // border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s;
+
+    @media (max-width: 768px) {
+        width: 88%;
+        padding: 1.5rem; // Reduce padding on smaller screens
+    }
+
+    .blogTitle {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #333;
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    .blogImage {
+        width: 90%;
+        display: block;
+        margin: 1rem auto; //
+        height: 70vh; // Maintain aspect ratio
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        @media screen and (max-width:768px) {
+            height: 42vh;
+        }
+    }
+
+    .blogMeta {
+        display: flex;
+        align-items: center;
+        justify-content: center; // Center content
+        margin-bottom: 1rem;
+
+        .icon {
+            margin-right: 0.5rem;
+            color: #777;
+        }
+    }
+
+    .blogDate {
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .blogContent {
+        font-size: 1.1rem; // Slightly smaller for better readability
+        line-height: 1.8; // Increased line height for readability
+        color: #555;
+        margin-bottom: 2rem;
+        padding: 2%;
+    }
+
+    .relatedTitle {
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #333;
+        text-align: center;
+    }
+
+    .relatedBlogs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // Responsive grid
+        gap: 1.5rem;
+
+        .relatedBlogCard {
+            background: #f9f9f9; // Card background color
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 1rem;
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .relatedBlogImage {
+                width: 100%;
+                height: 150px;
+                border-radius: 5px;
+                object-fit: cover;
+                margin-bottom: 0.5rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color: #666;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.icon{
+    height: 20px;
+}

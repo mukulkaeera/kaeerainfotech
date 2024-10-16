@@ -1,0 +1,100 @@
+.blogListContainer {
+    padding: 2rem;
+    background: linear-gradient(to right, #f3f4f6, #e4e7ec); // Light gradient background
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #6a82fb;
+        font-size: 2.5rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); // Responsive grid
+    gap: 1.5rem;
+}
+
+.blogCard {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; // Remove underline
+    position: relative; // For hover effect
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(106, 130, 251, 0.1);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover::after {
+        opacity: 1; // Add a background effect on hover
+    }
+}
+
+.blogImage {
+    width: 100%;
+    height: 200px; // Set fixed height for images
+    object-fit: cover; // Maintain aspect ratio
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05); // Zoom effect on hover
+    }
+}
+
+.blogContent {
+    padding: 1rem;
+
+    .blogTitle {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+        color: #333;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #ffcc00; // Change color on hover
+        }
+    }
+
+    .blogExcerpt {
+        margin: 0.5rem 0;
+        color: #666;
+    }
+
+    .blogAuthor {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        color: #999;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
